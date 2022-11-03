@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Chess Org</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="assignment10.css">
+</head>
+<body>
+	<main>
+	<h1>Membership Purchase Application</h1>
+		<h3>Customer Information</h3>
+		<script>
+			"use strict";
+			const unit = 30;
+			let name = prompt("Enter your name");
+			let address = prompt("Enter your address");
+			let number = prompt("Enter your phone number");
+			let email = prompt("Enter your email address");
+			let purchases = prompt("Enter the number of your purchases");
+			
+			let total = unit * purchases;
+			if (purchases >= 30 && purchases <= 50) {
+				let discount = total * 0.1;
+				let after_total = (total)-(discount);
+				}
+			const html = `<p><label>Name: </label>${name}</p>
+                <p><label>Address: </label>${address}</p>
+                <p><label>Email: </label>${email}</p>
+				<h3>Order Information</h3>
+				<p><label>Number of purchases($):&nbsp;&nbsp;&nbsp;</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${purchases}</p>
+				<p><label>Unit Price($):</label>${unit}</p>
+				<p><label>Price before discount($):</label>${total}</p>
+				<p><label>Discount(%):</label>${discount}</p>
+				<p><label>Price after discount($):</label>${after_total}</p>
+				<p>Thanks for using the application!</p>`;
+            document.write(html);
+		
+		
+		</script>
+	
+	</main>
+</body>
+</html>
